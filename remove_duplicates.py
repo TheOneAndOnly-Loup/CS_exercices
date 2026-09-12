@@ -12,4 +12,3 @@ for k in reversed(range(len(nums))):
 
 
 print(f"List with duplicates removed: {nums}, number of duplicates: {duplicates}")
-print("test")
