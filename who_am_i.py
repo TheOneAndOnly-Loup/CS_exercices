@@ -10,7 +10,8 @@ clue = 0
 while guess.lower() != celebrity.lower():
     print("Wrong Guess! Try again...")
     print(f"Here is a hint: {clues[clue]}\n")
-    
+
+# maybe implement later with recursion?
     clue += 1
     if clue > len(clues)-1:
         clue=0
