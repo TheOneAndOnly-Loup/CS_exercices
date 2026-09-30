@@ -1,5 +1,4 @@
 def icecreamParlor(m, arr):
-    # Write your code here
     for i in range(len(arr)):
         val1 = i
         for j in range(len(arr)):
