@@ -7,3 +7,5 @@ def icecreamParlor(m, arr):
                 if val1 == val2:
                     continue
                 return [i+1, j+1]
+
+print(icecreamParlor(4, [1, 4, 5, 3, 2]))
