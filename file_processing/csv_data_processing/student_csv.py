@@ -20,4 +20,5 @@ with open(filename, 'w') as csvfile:
 with open(filename, "r") as csvfile:
     content = csv.DictReader(csvfile)
     for row in content:
-        print(row)
+        if row["Major"] == "Computer Science":
+            print(row["StudentID"])
