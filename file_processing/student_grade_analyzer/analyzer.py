@@ -45,8 +45,3 @@ with open("random_grades.txt", "r") as file:
 
     with open("summary.txt", "w") as file:
         file.write(f"Average grade: {avg(grades)}/100, \nMinimum value: {min(grades)}, \nMaximum value: {max(grades)}, \nNumber of students passing: {count}, \nIndex of grade 88: {binary_search(sorted_grades, 0, len(sorted_grades)-1, 88)}")
-
-
-
-
-
