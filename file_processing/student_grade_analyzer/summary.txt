@@ -1,0 +1,5 @@
+Average grade: 55.02/100, 
+Minimum value: 0, 
+Maximum value: 100, 
+Number of students passing: 26, 
+Index of grade 88: 43
