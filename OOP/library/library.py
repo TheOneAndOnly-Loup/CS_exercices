@@ -19,6 +19,9 @@ class Member:
         self.name = name
         self.ID = random.randint(0, 10)
         self.books = books
+    def borrow(self, book):
+        self.books.append(book)
+        book.updateStatus()
 
 class Book:
     def __init__(self, name, author, borrowed, isbn):
@@ -29,6 +32,7 @@ class Book:
     def updateStatus(self):
         self.borrowed = not self.borrowed
         print("Borrowed status has been flipped.")
+
 
 
     
