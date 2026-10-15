@@ -1,11 +1,11 @@
-title,author,isbn,is_available
-Dune,Frank Herbert,1001,True
-The Hobbit,J.R.R. Tolkien,1002,True
-1984,George Orwell,1003,True
-Pride and Prejudice,Jane Austen,1004,True
-The Martian,Andy Weir,1005,True
-The Little Prince,Antoine de Saint-Exupéry,1006,True
-Fahrenheit 451,Ray Bradbury,1007,True
-Animal Farm,George Orwell,1008,True
-The Name of the Rose,Umberto Eco,1009,True
-The Hitchhiker's Guide to the Galaxy,Douglas Adams,1010,True
+title,author,isbn,borrowed
+Dune,Frank Herbert,1001,False
+The Hobbit,J.R.R. Tolkien,1002,False
+1984,George Orwell,1003,False
+Pride and Prejudice,Jane Austen,1004,False
+The Martian,Andy Weir,1005,False
+The Little Prince,Antoine de Saint-Exupéry,1006,False
+Fahrenheit 451,Ray Bradbury,1007,False
+Animal Farm,George Orwell,1008,False
+The Name of the Rose,Umberto Eco,1009,False
+The Hitchhiker's Guide to the Galaxy,Douglas Adams,1010,False

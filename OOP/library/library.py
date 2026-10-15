@@ -1,9 +1,9 @@
-import random
+import csv
 class Library:
-    def __init__(self, address, members, books):
+    def __init__(self, address, members):
         self.address = address
         self.members = members
-        self.books = books
+        self.books = []
 
     # Shows available books
     def availableBooks(self):
@@ -23,11 +23,27 @@ class Library:
         else:
             print("member doesnt exist")
 
+    # Loading books from csv file
+    def load_books(self, filename):
+        with open(filename, "r") as csvfile:
+            csvreader =  csv.reader(csvfile)
+            next(csvreader)  # Skip the header row
+            for row in csvreader:
+                name = row[0]
+                author = row[1]
+                isbn = row[2]
+                # convert from string to boolean
+                borrowed = row[3].strip().lower() == "true"
+
+                book = Book(name, author, borrowed, isbn)
+                self.books.append(book)
+
+
 class Member:
-    def __init__(self, name, books, ID):
+    def __init__(self, name, ID):
         self.name = name
         self.id = ID
-        self.books = books
+        self.books = []
         # libobj.members.append([self.id, self.name])
     
     # Takes a obj, checks if 
@@ -62,13 +78,16 @@ class Book:
 
 test_book = Book("test", "test", False, 16637)
 test_book2 = Book("test2", "test2", True, 4567898765432)
-bob = Member("Bob", [], 1)
-alice = Member("alice", [], 2)
+bob = Member("Bob", 1)
+alice = Member("alice", 2)
 
 member_list = [bob, alice]
-test_library=Library("test st", member_list, [test_book, test_book2])
+test_library=Library("test st", member_list)
 
 #bob.member_borrow(test_book)
 #alice.member_borrow(test_book2)
+# test_library.availableBooks()
+# test_library.showMembers()
+
+test_library.load_books("library_books.csv")
 test_library.availableBooks()
-test_library.showMembers()
